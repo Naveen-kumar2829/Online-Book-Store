@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brave New World</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Brave New World</h1>
+        </header>
+
+        <main>
+            <div class="book-detail-container">
+                <img src="../images/brave-new-world.jpg" alt="Brave New World">
+                <div class="book-info">
+                    <h2>Brave New World</h2>
+                    <p><strong>Author:</strong> Aldous Huxley</p>
+                    <p><strong>Genre:</strong> Dystopian, Science Fiction</p>
+                    <p><strong>Published:</strong> 1932</p>
+                    <p><strong>Synopsis:</strong> A visionary dystopian novel that explores the consequences of a scientifically controlled, utopian society where human beings are conditioned to accept their roles, devoid of individuality and emotion.</p>
+            <p><strong>Price:</strong> 399 Rupees</p>
+                    <button onclick="buyNow()">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="purchase-form" id="purchaseForm" style="display: none;">
+                <h3>Purchase Book</h3>
+                <form action="/OnlineBookStore/ConfirmPurchase" method="post">
+                    <input type="hidden" name="book_id" value="101">
+                    <input type="hidden" name="book_title" value="Brave New World">
+                
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="username" required>
+                
+                    <label for="address">Address:</label>
+                    <textarea name="address" required></textarea>
+                
+                    <label for="payment">Payment Method:</label>
+                    <select name="payment" required>
+                        <option value="cod">Cash on Delivery</option>
+                    </select>
+                    
+                    <button type="submit">Confirm Purchase</button>
+                </form>
+                
+            </div>
+        </main>
+
+        <script>
+            function buyNow() {
+                document.getElementById('purchaseForm').style.display = 'block';
+            }
+        </script>
+    </body>
+    </html>

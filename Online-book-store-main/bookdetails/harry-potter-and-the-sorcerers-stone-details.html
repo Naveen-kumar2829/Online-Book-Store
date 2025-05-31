@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter and the Sorcerer's Stone</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Harry Potter and the Sorcerer's Stone</h1>
+    </header>
+
+    <main>
+        <div class="book-detail-container">
+            <img src="../images/harry-potter-and-the-sorcerers-stone.jpg" alt="Harry Potter and the Sorcerer's Stone">
+            <div class="book-info">
+                <h2>Harry Potter and the Sorcerer's Stone</h2>
+                <p><strong>Author:</strong> J.K. Rowling</p>
+                <p><strong>Genre:</strong> Fantasy, Adventure</p>
+                <p><strong>Published:</strong> 1997</p>
+                <p><strong>Synopsis:</strong> The first book in the Harry Potter series introduces us to Harry, a young wizard who discovers his magical heritage and attends Hogwarts School of Witchcraft and Wizardry. He uncovers the truth about the mysterious Sorcerer's Stone and its power with his friends.</p>
+		<p><strong>Price:</strong> 399 Rupees</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="purchase-form" id="purchaseForm" style="display: none;">
+            <h3>Purchase Book</h3>
+            <form onsubmit="confirmPurchase(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function buyNow() {
+            document.getElementById('purchaseForm').style.display = 'block';
+        }
+
+        function confirmPurchase(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const payment = document.getElementById('payment').value;
+
+            if (name && address && payment) {
+                alert(`Thank you, ${name}! Your order has been placed and will be delivered to ${address}. Payment Method: ${payment.toUpperCase()}`);
+                document.getElementById('purchaseForm').reset();
+                document.getElementById('purchaseForm').style.display = 'none';
+            } else {
+                alert('Please fill in all the details.');
+            }
+        }
+    </script>
+</body>
+</html>

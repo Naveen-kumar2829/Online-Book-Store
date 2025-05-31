@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiction Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .book {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+            cursor: pointer; /* Indicate clickable */
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .book h3 {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+        }
+        .book p {
+            color: #555;
+            margin: 0;
+        }
+        .book:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Fiction Books</h1>
+    </header>
+
+    <main>
+        <div class="book" onclick="redirectToBookDetails('to-kill-a-mockingbird')">
+    <img src="images/to-kill-a-mockingbird.jpeg" alt="To Kill a Mockingbird">
+    <h3>To Kill a Mockingbird</h3>
+    <p>Author: Harper Lee</p>
+</div>
+
+        <div class="book" onclick="redirectToBookDetails('1984')">
+            <img src="images/1984.jpeg" alt="1984">
+            <h3>1984</h3>
+            <p>Author: George Orwell</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('pride-and-prejudice')">
+            <img src="images/pride-and-prejudice.jpg" alt="Pride and Prejudice">
+            <h3>Pride and Prejudice</h3>
+            <p>Author: Jane Austen</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-catcher-in-the-rye')">
+            <img src="images/the-catcher-in-the-rye.jpg" alt="The Catcher in the Rye">
+            <h3>The Catcher in the Rye</h3>
+            <p>Author: J.D. Salinger</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-hobbit')">
+            <img src="images/the-hobbit.jpg" alt="The Hobbit">
+            <h3>The Hobbit</h3>
+            <p>Author: J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('war-and-peace')">
+            <img src="images/war-and-peace.jpg" alt="War and Peace">
+            <h3>War and Peace</h3>
+            <p>Author: Leo Tolstoy</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-adventures-of-huckleberry-finn')">
+            <img src="images/the-adventures-of-huckleberry-finn.jpg" alt="The Adventures of Huckleberry Finn">
+            <h3>The Adventures of Huckleberry Finn</h3>
+            <p>Author: Mark Twain</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('crime-and-punishment')">
+            <img src="images/crime-and-punishment.jfif" alt="Crime and Punishment">
+            <h3>Crime and Punishment</h3>
+            <p>Author: Fyodor Dostoevsky</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-lord-of-the-rings')">
+            <img src="images/the-lord-of-the-rings.jpg" alt="The Lord of the Rings">
+            <h3>The Lord of the Rings</h3>
+            <p>Author: J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-great-gatsby')">
+            <img src="images/the-great-gatsby.jpg" alt="The Great Gatsby">
+            <h3>The Great Gatsby</h3>
+            <p>Author: F. Scott Fitzgerald</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('brave-new-world')">
+            <img src="images/brave-new-world.jpg" alt="Brave New World">
+            <h3>Brave New World</h3>
+            <p>Author: Aldous Huxley</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-godfather')">
+            <img src="images/the-godfather.jpg" alt="The Godfather">
+            <h3>The Godfather</h3>
+            <p>Author: Mario Puzo</p>
+        </div>
+    </main>
+
+    <script>
+        function redirectToBookDetails(bookId) {
+            window.location.href = 'bookdetails/' + bookId + '-details.html';
+        }
+    </script>
+</body>
+</html>

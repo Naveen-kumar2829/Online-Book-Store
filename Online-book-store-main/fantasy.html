@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .book {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+            cursor: pointer; /* Indicate clickable */
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .book h3 {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+        }
+        .book p {
+            color: #555;
+            margin: 0;
+        }
+        .book:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Fantasy Books</h1>
+    </header>
+
+    <main>
+        <div class="book" onclick="redirectToBookDetails('the-hobbit')">
+            <img src="images/the-hobbit.jpg" alt="The Hobbit">
+            <h3>The Hobbit</h3>
+            <p>Author: J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('harry-potter-and-the-sorcerers-stone')">
+            <img src="images/harry-potter-and-the-sorcerers-stone.jpg" alt="Harry Potter and the Sorcerer's Stone">
+            <h3>Harry Potter and the Sorcerer's Stone</h3>
+            <p>Author: J.K. Rowling</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('a-game-of-thrones')">
+            <img src="images/a-game-of-thrones.jpg" alt="A Game of Thrones">
+            <h3>A Game of Thrones</h3>
+            <p>Author: George R.R. Martin</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-name-of-the-wind')">
+            <img src="images/the-name-of-the-wind.jpg" alt="The Name of the Wind">
+            <h3>The Name of the Wind</h3>
+            <p>Author: Patrick Rothfuss</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-lord-of-the-rings')">
+            <img src="images/the-lord-of-the-rings.jpg" alt="The Lord of the Rings">
+            <h3>The Lord of the Rings</h3>
+            <p>Author: J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('mistborn')">
+            <img src="images/mistborn.jpg" alt="Mistborn">
+            <h3>Mistborn</h3>
+            <p>Author: Brandon Sanderson</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-wheel-of-time')">
+            <img src="images/the-wheel-of-time.jpg" alt="The Wheel of Time">
+            <h3>The Wheel of Time</h3>
+            <p>Author: Robert Jordan</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-lies-of-locke-lamora')">
+            <img src="images/the-lies-of-locke-lamora.jpg" alt="The Lies of Locke Lamora">
+            <h3>The Lies of Locke Lamora</h3>
+            <p>Author: Scott Lynch</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-way-of-kings')">
+            <img src="images/the-way-of-kings.jpg" alt="The Way of Kings">
+            <h3>The Way of Kings</h3>
+            <p>Author: Brandon Sanderson</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-princess-bride')">
+            <img src="images/the-princess-bride.jpg" alt="The Princess Bride">
+            <h3>The Princess Bride</h3>
+            <p>Author: William Goldman</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('good-omens')">
+            <img src="images/good-omens.jpg" alt="Good Omens">
+            <h3>Good Omens</h3>
+            <p>Author: Neil Gaiman & Terry Pratchett</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('eragon')">
+            <img src="images/eragon.jpg" alt="Eragon">
+            <h3>Eragon</h3>
+            <p>Author: Christopher Paolini</p>
+        </div>
+    </main>
+
+    <script>
+        function redirectToBookDetails(bookId) {
+            window.location.href = 'bookdetails/' + bookId + '-details.html';
+        }
+    </script>
+</body>
+</html>

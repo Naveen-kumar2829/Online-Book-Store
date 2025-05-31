@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .book {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+            cursor: pointer; /* Indicate clickable */
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .book h3 {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+        }
+        .book p {
+            color: #555;
+            margin: 0;
+        }
+        .book:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Mystery Books</h1>
+    </header>
+
+    <main>
+        <div class="book" onclick="redirectToBookDetails('the-girl-with-the-dragon-tattoo')">
+            <img src="images/the-girl-with-the-dragon-tattoo.jpg" alt="The Girl with the Dragon Tattoo">
+            <h3>The Girl with the Dragon Tattoo</h3>
+            <p>Author: Stieg Larsson</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('gone-girl')">
+            <img src="images/gone-girl.jpg" alt="Gone Girl">
+            <h3>Gone Girl</h3>
+            <p>Author: Gillian Flynn</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-da-vinci-code')">
+            <img src="images/the-da-vinci-code.jpg" alt="The Da Vinci Code">
+            <h3>The Da Vinci Code</h3>
+            <p>Author: Dan Brown</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('sherlock-holmes')">
+            <img src="images/sherlock-holmes.jpg" alt="Sherlock Holmes">
+            <h3>Sherlock Holmes: The Complete Novels and Stories</h3>
+            <p>Author: Arthur Conan Doyle</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('big-little-lies')">
+            <img src="images/big-little-lies.jpg" alt="Big Little Lies">
+            <h3>Big Little Lies</h3>
+            <p>Author: Liane Moriarty</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('and-then-there-were-none')">
+            <img src="images/and-then-there-were-none.jpg" alt="And Then There Were None">
+            <h3>And Then There Were None</h3>
+            <p>Author: Agatha Christie</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-silence-of-the-lambs')">
+            <img src="images/the-silence-of-the-lambs.jpg" alt="The Silence of the Lambs">
+            <h3>The Silence of the Lambs</h3>
+            <p>Author: Thomas Harris</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('in-the-woods')">
+            <img src="images/in-the-woods.jpg" alt="In the Woods">
+            <h3>In the Woods</h3>
+            <p>Author: Tana French</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-girl-on-the-train')">
+            <img src="images/the-girl-on-the-train.jpg" alt="The Girl on the Train">
+            <h3>The Girl on the Train</h3>
+            <p>Author: Paula Hawkins</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-secret-history')">
+            <img src="images/the-secret-history.jpg" alt="The Secret History">
+            <h3>The Secret History</h3>
+            <p>Author: Donna Tartt</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-woman-in-white')">
+            <img src="images/the-woman-in-white.jpg" alt="The Woman in White">
+            <h3>The Woman in White</h3>
+            <p>Author: Wilkie Collins</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('rebecca')">
+            <img src="images/rebecca.jpg" alt="Rebecca">
+            <h3>Rebecca</h3>
+            <p>Author: Daphne du Maurier</p>
+        </div>
+    </main>
+
+    <script>
+        function redirectToBookDetails(bookId) {
+            window.location.href = 'bookdetails/' + bookId + '-details.html';
+        }
+    </script>
+</body>
+</html>

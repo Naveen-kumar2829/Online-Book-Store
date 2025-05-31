@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Bookstore</h1>
+        <div id="authArea">
+            <button onclick="redirectToLogin()">Login</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Select Genre</h2>
+        <div id="genres">
+            <div class="genre">
+                <a href="fiction.html">
+                    <img src="images/fiction.png" alt="Fiction">
+                    <div class="genre-name">Fiction</div>
+                </a>
+            </div>
+            <div class="genre">
+                <a href="non-fiction.html">
+                    <img src="images/non-fiction.png" alt="Non-Fiction">
+                    <div class="genre-name">Non-Fiction</div>
+                </a>
+            </div>
+            <div class="genre">
+                <a href="fantasy.html">
+                    <img src="images/fantasy.jpeg" alt="Fantasy">
+                    <div class="genre-name">Fantasy</div>
+                </a>
+            </div>
+            <div class="genre">
+                <a href="mystery.html">
+                    <img src="images/mystery.jpg" alt="Mystery">
+                    <div class="genre-name">Mystery</div>
+                </a>
+            </div>
+
+            <!-- Add more genre links as needed -->
+        </div><br><br><br><br><br>
+<center style= "background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px ;
+    text-align: center;">For Queries, Contact us : 8019852479<br>Mail:kushalghanathey@gmail.com</center>
+    </main>
+
+    <script>
+        function redirectToLogin() {
+            window.location.href = 'login.html';
+        }
+
+        function logout() {
+            localStorage.removeItem('username');  // Clear the username from localStorage
+            window.location.reload();  // Reload the page to update the auth area
+        }
+
+        function updateAuthArea() {
+            const username = localStorage.getItem('username');
+            const authArea = document.getElementById('authArea');
+            
+            if (username) {
+                authArea.innerHTML = `<span>Welcome, ${username}</span> <button onclick="logout()">Logout</button>`;
+            }
+        }
+
+        // Run the function to update the auth area on page load
+        window.onload = updateAuthArea;
+    </script>
+</body>
+</html>

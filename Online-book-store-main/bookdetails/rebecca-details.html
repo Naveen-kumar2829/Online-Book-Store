@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rebecca</h1>
+    </header>
+
+    <main>
+        <div class="book-detail-container">
+            <img src="../images/rebecca.jpg" alt="Rebecca">
+            <div class="book-info">
+                <h2>Rebecca</h2>
+                <p><strong>Author:</strong> Daphne du Maurier</p>
+                <p><strong>Genre:</strong> Gothic, Romance</p>
+                <p><strong>Published:</strong> 1938</p>
+                <p><strong>Synopsis:</strong> A haunting novel about a young bride who is overshadowed by her husband's first wife, Rebecca. The story weaves together suspense, romance, and psychological drama in a classic gothic setting.</p>
+		<p><strong>Price:</strong> 399 Rupees</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="purchase-form" id="purchaseForm" style="display: none;">
+            <h3>Purchase Book</h3>
+            <form onsubmit="confirmPurchase(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function buyNow() {
+            document.getElementById('purchaseForm').style.display = 'block';
+        }
+
+        function confirmPurchase(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const payment = document.getElementById('payment').value;
+
+            if (name && address && payment) {
+                alert(`Thank you, ${name}! Your order has been placed and will be delivered to ${address}. Payment Method: ${payment.toUpperCase()}`);
+                document.getElementById('purchaseForm').reset();
+                document.getElementById('purchaseForm').style.display = 'none';
+            } else {
+                alert('Please fill in all the details.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <servlet>
+        <servlet-name>ConfirmPurchase</servlet-name>
+        <servlet-class>com.onlinebookstore.controller.ConfirmPurchase</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfirmPurchase</servlet-name>
+        <url-pattern>/ConfirmPurchase</url-pattern>
+    </servlet-mapping>
+</web-app>

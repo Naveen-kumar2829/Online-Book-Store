@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Silence of the Lambs</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Silence of the Lambs</h1>
+    </header>
+
+    <main>
+        <div class="book-detail-container">
+            <img src="../images/the-silence-of-the-lambs.jpg" alt="The Silence of the Lambs">
+            <div class="book-info">
+                <h2>The Silence of the Lambs</h2>
+                <p><strong>Author:</strong> Thomas Harris</p>
+                <p><strong>Genre:</strong> Thriller, Horror</p>
+                <p><strong>Published:</strong> 1988</p>
+                <p><strong>Synopsis:</strong> FBI trainee Clarice Starling seeks the help of imprisoned cannibalistic serial killer Hannibal Lecter to catch another serial killer on the loose. A psychological thriller exploring complex characters and intense suspense.</p>
+		<p><strong>Price:</strong> 399 Rupees</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="purchase-form" id="purchaseForm" style="display: none;">
+            <h3>Purchase Book</h3>
+            <form onsubmit="confirmPurchase(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function buyNow() {
+            document.getElementById('purchaseForm').style.display = 'block';
+        }
+
+        function confirmPurchase(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const payment = document.getElementById('payment').value;
+
+            if (name && address && payment) {
+                alert(`Thank you, ${name}! Your order has been placed and will be delivered to ${address}. Payment Method: ${payment.toUpperCase()}`);
+                document.getElementById('purchaseForm').reset();
+                document.getElementById('purchaseForm').style.display = 'none';
+            } else {
+                alert('Please fill in all the details.');
+            }
+        }
+    </script>
+</body>
+<

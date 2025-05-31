@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lord of the Rings</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Lord of the Rings</h1>
+    </header>
+
+    <main>
+        <div class="book-detail-container">
+            <img src="../images/the-lord-of-the-rings.jpg" alt="The Lord of the Rings">
+            <div class="book-info">
+                <h2>The Lord of the Rings</h2>
+                <p><strong>Author:</strong> J.R.R. Tolkien</p>
+                <p><strong>Genre:</strong> Fantasy</p>
+                <p><strong>Published:</strong> 1954</p>
+                <p><strong>Synopsis:</strong> An epic high-fantasy novel that follows the quest to destroy the One Ring, an artifact of great power, and the impact of this journey on the world of Middle-earth.</p>
+		<p><strong>Price:</strong> 399 Rupees</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="purchase-form" id="purchaseForm" style="display: none;">
+            <h3>Purchase Book</h3>
+            <form onsubmit="confirmPurchase(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function buyNow() {
+            document.getElementById('purchaseForm').style.display = 'block';
+        }
+
+        function confirmPurchase(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const payment = document.getElementById('payment').value;
+
+            if (name && address && payment) {
+                alert(`Thank you, ${name}! Your order has been placed and will be delivered to ${address}. Payment Method: ${payment.toUpperCase()}`);
+                document.getElementById('purchaseForm').reset();
+                document.getElementById('purchaseForm').style.display = 'none';
+            } else {
+                alert('Please fill in all the details.');
+            }
+        }
+    </script>
+</body>
+</html>

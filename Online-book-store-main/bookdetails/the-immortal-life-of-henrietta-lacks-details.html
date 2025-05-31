@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Immortal Life of Henrietta Lacks</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Immortal Life of Henrietta Lacks</h1>
+    </header>
+
+    <main>
+        <div class="book-detail-container">
+            <img src="../images/the-immortal-life-of-henrietta-lacks.jpg" alt="The Immortal Life of Henrietta Lacks">
+            <div class="book-info">
+                <h2>The Immortal Life of Henrietta Lacks</h2>
+                <p><strong>Author:</strong> Rebecca Skloot</p>
+                <p><strong>Genre:</strong> Biography, Science</p>
+                <p><strong>Published:</strong> 2010</p>
+                <p><strong>Synopsis:</strong> The story of Henrietta Lacks, whose cancer cells were taken without her knowledge and became one of the most important tools in medicine. This book explores the ethical issues of scientific research and the impact on her family.</p>
+		<p><strong>Price:</strong> 399 Rupees</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="purchase-form" id="purchaseForm" style="display: none;">
+            <h3>Purchase Book</h3>
+            <form onsubmit="confirmPurchase(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function buyNow() {
+            document.getElementById('purchaseForm').style.display = 'block';
+        }
+
+        function confirmPurchase(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const payment = document.getElementById('payment').value;
+
+            if (name && address && payment) {
+                alert(`Thank you, ${name}! Your order has been placed and will be delivered to ${address}. Payment Method: ${payment.toUpperCase()}`);
+                document.getElementById('purchaseForm').reset();
+                document.getElementById('purchaseForm').style.display = 'none';
+            } else {
+                alert('Please fill in all the details.');
+            }
+        }
+    </script>
+</body>
+</html>

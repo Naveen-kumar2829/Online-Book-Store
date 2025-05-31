@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Omens</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Good Omens</h1>
+    </header>
+
+    <main>
+        <div class="book-detail-container">
+            <img src="../images/good-omens.jpg" alt="Good Omens">
+            <div class="book-info">
+                <h2>Good Omens</h2>
+                <p><strong>Author:</strong> Neil Gaiman & Terry Pratchett</p>
+                <p><strong>Genre:</strong> Fantasy, Comedy</p>
+                <p><strong>Published:</strong> 1990</p>
+                <p><strong>Synopsis:</strong> "Good Omens" is a humorous novel about the birth of the son of Satan and the coming of the End Times. The story follows an angel and a demon who, having grown accustomed to the Earth, seek to prevent the apocalypse. The novel blends satire, fantasy, and clever commentary on human nature.</p>
+		<p><strong>Price:</strong> 399 Rupees</p>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="purchase-form" id="purchaseForm" style="display: none;">
+            <h3>Purchase Book</h3>
+            <form onsubmit="confirmPurchase(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function buyNow() {
+            

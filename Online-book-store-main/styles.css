@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Book Detail Styles */
+.book-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.book-detail-container img {
+    max-width: 150px; /* Adjusted size */
+    width: 100%;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.book-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.book-info h2 {
+    margin-top: 0;
+}
+
+.book-info p {
+    margin: 10px 0;
+}
+
+.book-info button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-info button:hover {
+    background-color: #27ae60;
+}
+
+/* Purchase Form Styles */
+.purchase-form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.purchase-form h3 {
+    margin-top: 0;
+}
+
+.purchase-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.purchase-form input,
+.purchase-form textarea,
+.purchase-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+.purchase-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.purchase-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Genre Styles */
+#genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.genre {
+    text-align: center;
+    margin: 10px;
+}
+
+.genre img {
+    max-width: 250px; /* Adjusted size for genre images */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.genre-name {
+    font-size: 1.2rem;
+    color: #34495e;
+}
+main form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}

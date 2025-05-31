@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Fiction Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .book {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+            cursor: pointer; /* Indicate clickable */
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .book h3 {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+        }
+        .book p {
+            color: #555;
+            margin: 0;
+        }
+        .book:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Non-Fiction Books</h1>
+    </header>
+
+    <main>
+        <div class="book" onclick="redirectToBookDetails('sapiens')">
+            <img src="images/sapiens.jpg" alt="Sapiens: A Brief History of Humankind">
+            <h3>Sapiens: A Brief History of Humankind</h3>
+            <p>Author: Yuval Noah Harari</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('educated')">
+            <img src="images/educated.jpg" alt="Educated">
+            <h3>Educated</h3>
+            <p>Author: Tara Westover</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-wright-brothers')">
+            <img src="images/the-wright-brothers.jpg" alt="The Wright Brothers">
+            <h3>The Wright Brothers</h3>
+            <p>Author: David McCullough</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('becoming')">
+            <img src="images/becoming.jpg" alt="Becoming">
+            <h3>Becoming</h3>
+            <p>Author: Michelle Obama</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('unbroken')">
+            <img src="images/unbroken.jpg" alt="Unbroken">
+            <h3>Unbroken</h3>
+            <p>Author: Laura Hillenbrand</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-immortal-life-of-henrietta-lacks')">
+            <img src="images/the-immortal-life-of-henrietta-lacks.jpg" alt="The Immortal Life of Henrietta Lacks">
+            <h3>The Immortal Life of Henrietta Lacks</h3>
+            <p>Author: Rebecca Skloot</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-power-of-habit')">
+            <img src="images/the-power-of-habit.jpg" alt="The Power of Habit">
+            <h3>The Power of Habit</h3>
+            <p>Author: Charles Duhigg</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('thinking-fast-and-slow')">
+            <img src="images/thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow">
+            <h3>Thinking, Fast and Slow</h3>
+            <p>Author: Daniel Kahneman</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('outliers')">
+            <img src="images/outliers.jpg" alt="Outliers: The Story of Success">
+            <h3>Outliers: The Story of Success</h3>
+            <p>Author: Malcolm Gladwell</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-diary-of-a-young-girl')">
+            <img src="images/the-diary-of-a-young-girl.jpg" alt="The Diary of a Young Girl">
+            <h3>The Diary of a Young Girl</h3>
+            <p>Author: Anne Frank</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('the-tipping-point')">
+            <img src="images/the-tipping-point.jpg" alt="The Tipping Point">
+            <h3>The Tipping Point</h3>
+            <p>Author: Malcolm Gladwell</p>
+        </div>
+
+        <div class="book" onclick="redirectToBookDetails('guns-germs-and-steel')">
+            <img src="images/guns-germs-and-steel.jpg" alt="Guns, Germs, and Steel">
+            <h3>Guns, Germs, and Steel</h3>
+            <p>Author: Jared Diamond</p>
+        </div>
+    </main>
+
+    <script>
+        function redirectToBookDetails(bookId) {
+            window.location.href = 'bookdetails/' + bookId + '-details.html';
+        }
+    </script>
+</body>
+</html>
